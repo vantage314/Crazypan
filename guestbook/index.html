@@ -83,12 +83,29 @@
 <p>期待听到你的声音！💬</p>
 <h2 id="📝-留言须知"><a href="#📝-留言须知" class="headerlink" title="📝 留言须知"></a>📝 留言须知</h2><ul>
 <li>请文明发言，互相尊重</li>
-<li>技术问题欢迎详细描述</li>
-<li>我会及时回复大家的留言</li>
-<li>如有紧急问题，建议通过其他方式联系</li>
+<li>支持 Markdown 格式</li>
+<li>可以匿名留言</li>
+<li>支持表情包和图片</li>
 </ul>
 <hr>
 <div id="waline"></div>
+
+<script src="//cdn.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
+<script>
+  Waline.init({
+    el: '#waline',
+    serverURL: 'https://waline.vercel.app',
+    path: window.location.pathname,
+    lang: 'zh-CN',
+    visitor: true,
+    meta: ['nick', 'mail', 'link'],
+    requiredMeta: ['nick', 'mail'],
+    wordLimit: 0,
+    emoji: [
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo'
+    ]
+  });
+</script>
  
       <!-- reward -->
       
